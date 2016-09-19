@@ -42,7 +42,7 @@ def evaluation(gold_file, pred_file):
             n_goldw += len(gold_list)
             n_predw += len(pred_list)
             # calcurating the number of words correctly predicted
-            n_correct = len(set(gold_list).intersection(pred_list))
+            n_correct += len(set(gold_list).intersection(pred_list))
     precision = n_correct / n_predw
     recall = n_correct / n_goldw
     f_measure = 2 * precision * recall / (precision + recall)
